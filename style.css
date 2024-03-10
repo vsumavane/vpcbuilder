@@ -53,6 +53,10 @@ h1 {
     max-height: 100%;
 }
 
+.login-btn:hover, .signup-btn:hover, .action-btn:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 .popup {
     display: none;
     position: fixed;
