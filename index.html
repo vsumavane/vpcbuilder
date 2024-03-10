@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <button class="login-btn" onclick="openLoginPopup()">Login</button>
+        <button class="signup-btn" onclick="openSignupPopup()">Sign Up</button>
+    </header>
+
+    <h1>VirtualPC Builder</h1>
+
+    <div class="center-container">
+        <button class="action-btn">
+            <img src="assets/build_logo.avif" alt="Build Logo" style="width:200px; height:200px;">
+            <p>Build</p>
+        </button>
+
+        <button class="action-btn">
+            <img src="assets/analyse_logo.jpg" alt="Analyse Logo" style="width: 200px; height: 200px;">
+            <p>Analyse</p>
+        </button>
+    </div>
+
+    <!-- Login Popup -->
+    <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLoginPopup()">&times;</span>
+            <!-- Add your login form content here -->
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Popup -->
+    <div id="signupPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeSignupPopup()">&times;</span>
+            <!-- Add your signup form content here -->
+            <h2>Sign Up</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="mobileNumber">Mobile Number:</label>
+                <input type="tel" id="mobileNumber" name="mobileNumber" required>
+
+                <button type="submit">Login</button>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
