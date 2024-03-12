@@ -1,5 +1,5 @@
 ## Frontend Tasks: 
-### UI Tasks :
+## UI Tasks :
 - [ ] Home Page
 - - [x] Login / Sign up Button
 - - [x] Build | Analyse
@@ -15,4 +15,4 @@
 - [ ] Express.js
 
 ## Database Tasks :
-### - [ ] MongoDB Integration
+- [ ] MongoDB Integration
