@@ -1,4 +1,3 @@
-// script.js
 function openLoginPopup() {
     document.getElementById('loginPopup').style.display = 'block';
 }

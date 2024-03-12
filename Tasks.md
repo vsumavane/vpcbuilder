@@ -11,8 +11,8 @@
 
 
 ## Backend Tasks :
-- [ ] Node.js Integration
-- [ ] Express.js
+- [x] Node.js Integration
+- [x] Express.js
 
 ## Database Tasks :
 - [ ] MongoDB Integration

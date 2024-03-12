@@ -1,0 +1,15 @@
+{
+  "name": "e-com_pcbuild_app",
+  "version": "1.0.0",
+  "description": "Presentation file : [https://bit.ly/pcbuild_ppt]",
+  "main": "script.js",
+  "scripts": {
+    "start": "node server.js"
+  },  
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
