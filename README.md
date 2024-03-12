@@ -2,4 +2,4 @@
 
 Presentation file : [https://bit.ly/pcbuild_ppt]
 
-### Check out [Tasks.md](/tasks.md) to know about Tasks in hand. 
+### Check out [Tasks.md](Tasks.md) to know about Tasks in hand. 
