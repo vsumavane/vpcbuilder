@@ -1,16 +1,18 @@
 ## Frontend Tasks: 
 ### UI Tasks :
-Home Page <br>
-- [ ] Login / Sign up Button
-- [ ] Build | Analyse
+- [ ] Home Page
+- - [x] Login / Sign up Button
+- - [x] Build | Analyse
 
--Partpicker, Build Space
-        - PartPicker - components section : CPU(main)| others (Monitor, Keyboard, Mouse, Speakers, Headphones, Microphone, FaceCam)
-        - Build Space
+- [ ] Partpicker Page
+- - [ ] Filter Pane : CPU(main) | others (Monitor, Keyboard, Mouse, Speakers, Headphones, Microphone, FaceCam)
+
+- [ ] Build Space
 
 
 ## Backend Tasks :
-
+- [ ] Node.js Integration
+- [ ] Express.js
 
 ## Database Tasks :
-### MongoDB Integration
+### - [ ] MongoDB Integration
