@@ -1,38 +1,125 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .App {
   text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Pop-up styling */
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 1000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.popup-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.popup-content h2 {
+  margin-bottom: 10px;
+}
+
+/* Main section for buttons */
+.main-section {
+  position: relative;
+  margin: 20px 0;
+}
+
+.main-section button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Menu section hidden by default, visible on hover */
+.menu-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100vh;
+  background-color: #333;
   color: white;
+  transition: width 0.3s;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.menu-section:hover {
+  width: 250px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.menu-section ul li {
+  padding: 15px;
+  width: 100%;
+}
+
+.menu-section ul li button {
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  font-size: 18px;
+}
+
+.menu-section ul li button:hover {
+  background-color: #555;
+}
+
+/* Hamburger icon */
+.menu-section .hamburger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  cursor: pointer;
+}
+
+.menu-section .hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+/* Hide the menu content when not hovering */
+.menu-section ul {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.menu-section:hover ul {
+  opacity: 1;
+}
+
+/* Adjust menu when hovering */
+.menu-section:hover .hamburger {
+  display: none;
 }
