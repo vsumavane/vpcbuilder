@@ -1,83 +1,34 @@
-import './App.css';
-import React, { useState } from 'react';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import ErrorBoundary from './components/ErrorBoundary';
+
+const Home = lazy(() => import('./components/Home'));
+const BuildPC = lazy(() => import('./components/BuildPC'));
+const PrebuiltPC = lazy(() => import('./components/PrebuiltPC'));
+const ExpenseEvaluation = lazy(() => import('./components/ExpenseEvaluation'));
+const HowToBuild = lazy(() => import('./pages/HowToBuild'));
+const AboutUs = lazy(() => import('./pages/AboutUs'));
 
 function App() {
-  const [showPopup, setShowPopup] = useState(true); // Manage the pop-up state
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Manage login state
-
-  const togglePopup = () => setShowPopup(!showPopup);
-  const handleLogin = () => setIsLoggedIn(true);
-  const handleLogout = () => setIsLoggedIn(false);
-
   return (
-    <div className="App">
-      <header>
-        <h1>Home Page</h1>
-      </header>
-
-      {/* Pop-up with info about the website */}
-      {showPopup && (
-        <div className="popup">
-          <div className="popup-content">
-            <h2>Welcome to Our Website!</h2>
-            <p>Here you can build a custom PC or load a pre-saved one.</p>
-            <button onClick={togglePopup}>Close</button>
-          </div>
-        </div>
-      )}
-
-      {/* Main section with buttons */}
-      <div className="main-section">
-        <button onClick={() => alert('Redirecting to Build new PC')}>
-          Build new PC
-        </button>
-        <button onClick={() => alert('Opening Pre-built saved PC')}>
-          Open PreBuild saved PC
-        </button>
+    <Router>
+      <div>
+        <Navbar />
+        <ErrorBoundary>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/build" element={<BuildPC />} />
+              <Route path="/prebuilt-pc" element={<PrebuiltPC />} />
+              <Route path="/expense-evaluation" element={<ExpenseEvaluation />} />
+              <Route path="/how-to-build" element={<HowToBuild />} />
+              <Route path="/about-us" element={<AboutUs />} />
+            </Routes>
+          </Suspense>
+        </ErrorBoundary>
       </div>
-
-      {/* Menu Section */}
-      <nav className="menu-section">
-        <ul>
-          {!isLoggedIn ? (
-            <>
-              <li>
-                <button onClick={handleLogin}>Login / Sign Up</button>
-              </li>
-            </>
-          ) : (
-            <>
-              <li>
-                <button onClick={handleLogout}>Logout</button>
-              </li>
-            </>
-          )}
-          <li>
-            <button onClick={() => alert('Redirecting to Build PC')}>
-              Build PC
-            </button>
-          </li>
-          <li>
-            <button onClick={() => alert('Loading PreSaved PC')}>
-              Load PreSaved PC
-            </button>
-          </li>
-          <li>
-            <button onClick={() => alert('Redirecting to How to Build')}>
-              How to Build
-            </button>
-          </li>
-          <li>
-            <button onClick={() => alert('Redirecting to About Us')}>
-              About Us
-            </button>
-          </li>
-        </ul>
-      </nav>
-
-      {/* Add some styling */}
-      <style jsx>{}</style>
-    </div>
+    </Router>
   );
 }
 
