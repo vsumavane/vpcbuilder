@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import PerformanceStats from './PerformanceStats';
+import ExpenseEvaluation from './ExpenseEvaluation'; // Import the ExpenseEvaluation component
 
 const PartSelection = ({ label, part, options, selectedValue, onChange, required }) => (
   <div className="part-selection">
@@ -87,6 +88,7 @@ function BuildPC() {
       </form>
 
       <PerformanceStats selectedParts={selectedParts} />
+      <ExpenseEvaluation selectedParts={selectedParts} /> {/* Add ExpenseEvaluation component */}
     </div>
   );
 }
