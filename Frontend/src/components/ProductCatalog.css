@@ -1,0 +1,25 @@
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .product-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-card h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .product-card p {
+    margin: 10px 0;
+    color: #555;
+  }
+  
